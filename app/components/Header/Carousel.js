@@ -10,20 +10,19 @@ import './style.scss';
 class CarouselComponent extends React.Component { // eslint-disable-line react/prefer-stateless-function
     render() {
         return (
-            <Carousel autoPlay showThumbs={false} infiniteLoop={true} interval={10000}>
+            <Carousel autoPlay showThumbs={false} infiniteLoop={true} interval={10000} width={600}>
                 <div>
                     
                     <img src={Homeimage} />
-                    <Link className="router-link" to="/"><p className="legend">Home</p></Link>
-                    
+                    <Link className="router-link" to="/">Home</Link>                    
                 </div>
                 <div>
                     <img src={Productsimage} />
-                    <Link className="router-link" to="/products"><p className="legend">Our Products</p></Link>                    
+                    <Link className="router-link" to="/products">Our Products</Link>                    
                 </div>
                 <div>
                     <img src={Serviceimage} />
-                    <Link className="router-link" to="/services"><p className="legend">Our Services</p></Link>                     >
+                    <Link className="router-link" to="/services">Our Services</Link>                     >
                 </div>
                 {/* <div>
                     <img src="assets/4.jpeg" />
