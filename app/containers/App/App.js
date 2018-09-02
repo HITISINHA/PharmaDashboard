@@ -13,8 +13,8 @@ import { Switch, Route } from 'react-router-dom';
 import HomePage from 'containers/HomePage/Loadable';
 import FeaturePage from 'containers/FeaturePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
-import ProductsPage from 'containers/Products/Loadable';
-import ServicesPage from 'containers/Services/Loadable';
+import ProductsPage from 'containers/ProductsPage/Loadable';
+import ServicesPage from 'containers/ServicesPage/Loadable';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 import './style.scss';
@@ -31,8 +31,8 @@ const App = () => (
     <Switch>
       <Route exact path="/" component={HomePage} />
       <Route path="/features" component={FeaturePage} />
-      <Route path="/products" component={Products} />
-      <Route path="/services" component={Services} />
+      <Route path="/products" component={ProductsPage} />
+      <Route path="/services" component={ServicesPage} />
       <Route path="" component={NotFoundPage} />
     </Switch>
     <Footer />

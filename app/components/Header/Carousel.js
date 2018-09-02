@@ -1,5 +1,6 @@
 import React from 'react';
 //import Banner from './images/banner.jpg';
+import { Link } from 'react-router-dom';
 import { Carousel } from "react-responsive-carousel";
 import Homeimage from './images/home_carrousel.gif';
 import Productsimage from './images/product_carrousel.gif';
