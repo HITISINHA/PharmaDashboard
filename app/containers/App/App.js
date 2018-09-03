@@ -9,7 +9,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Switch, Route } from 'react-router-dom';
-
+import HeaderBar from '../../components/Header/HeaderBar';
 import HomePage from 'containers/HomePage/Loadable';
 import FeaturePage from 'containers/FeaturePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
@@ -20,21 +20,24 @@ import Footer from 'components/Footer';
 import './style.scss';
 
 const App = () => (
-  <div className="app-wrapper">
+  <div>
     <Helmet
       titleTemplate="%s - PharmaDashboard"
       defaultTitle="PharmaDashboard"
     >
       <meta name="description" content="A PharmaDashboard application" />
     </Helmet>
-    <Header />
-    <Switch>
-      <Route exact path="/" component={HomePage} />
-      <Route path="/features" component={FeaturePage} />
-      <Route path="/products" component={ProductsPage} />
-      <Route path="/services" component={ServicesPage} />
-      <Route path="" component={NotFoundPage} />
-    </Switch>
+    <HeaderBar />
+    <div className="app-wrapper">
+      <Header />
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route path="/features" component={FeaturePage} />
+        <Route path="/products" component={ProductsPage} />
+        <Route path="/services" component={ServicesPage} />
+        <Route path="" component={NotFoundPage} />
+      </Switch>
+    </div>
     <Footer />
   </div>
 );
