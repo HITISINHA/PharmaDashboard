@@ -1,7 +1,7 @@
 {
   "name": "react-redux-boilerplate",
   "version": "1.0.0",
-  "description": "A minimal react-redux boilerplate with all the best practices",
+  "description": "A minimal PharmaDashboard with all the best practices",
   "repository": {
     "type": "git",
     "url": "git://github.com/flexdinesh/react-redux-boilerplate.git"
@@ -30,6 +30,8 @@
     "test:watch": "cross-env NODE_ENV=test jest --watchAll"
   },
   "dependencies": {
+    "@material-ui/core": "^3.0.1",
+    "@material-ui/icons": "^3.0.1",
     "babel-polyfill": "6.26.0",
     "chalk": "^2.3.2",
     "compression": "1.7.2",
