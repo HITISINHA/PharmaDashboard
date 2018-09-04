@@ -41,31 +41,14 @@ module.exports = (options) => ({
         use: 'file-loader',
       },
       {
-        test: /\.(jpg|png|gif)$/,
-        use: [
-          'file-loader',
-          {
-            loader: 'image-webpack-loader',
-            options: {
-              query: {
-                gifsicle: {
-                  interlaced: true
-                },
-                mozjpeg: {
-                  progressive: true
-                },
-                optipng: {
-                  optimizationLevel: 7
-                },
-                pngquant: {
-                  quality: '65-90',
-                  speed: 4
-                }
-              }
-            },
-          },
-        ],
+        test: /\.pem$/,
+        loader: 'raw-loader'
       },
+          // Load images
+          { test: /\.jpg/, loader: 'url-loader?limit=10000&mimetype=image/jpg' },
+          { test: /\.gif/, loader: 'url-loader?limit=10000&mimetype=image/gif' },
+          { test: /\.png/, loader: 'url-loader?limit=10000&mimetype=image/png' },
+          { test: /\.svg/, loader: 'url-loader?limit=10000&mimetype=image/svg' },
       {
         test: /\.html$/,
         use: 'html-loader'
