@@ -14,15 +14,18 @@ class CarouselComponent extends React.Component { // eslint-disable-line react/p
                 <div>
                     
                     <img src={Homeimage} />
-                    <Link className="router-link" to="/">Home</Link>                    
+                    <Link className="router-link button-left" to="/">Know More</Link> 
+                    <Link className="router-link button-right" to="/">Home</Link>                    
                 </div>
                 <div>
                     <img src={Productsimage} />
-                    <Link className="router-link" to="/products">Our Products</Link>                    
+                    <Link className="router-link button-left" to="/">Know More</Link> 
+                    <Link className="router-link button-right" to="/products">Our Products</Link>                    
                 </div>
                 <div>
                     <img src={Serviceimage} />
-                    <Link className="router-link" to="/services">Our Services</Link>                     >
+                    <Link className="router-link button-left" to="/">Know More</Link> 
+                    <Link className="router-link button-right" to="/services">Our Services</Link>                   
                 </div>
                 {/* <div>
                     <img src="assets/4.jpeg" />

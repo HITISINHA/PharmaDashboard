@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 const styles = {
   root: {
@@ -22,22 +23,31 @@ const styles = {
 //   backgroundColor: '#e0fefdf5',
 };
 
+
+const theme = createMuiTheme({
+  palette: {
+    primary: { main: '#e0fffb' } // This is just green.A700 as hex.
+  },
+});
+
 function HeaderBar(props) {
   const { classes } = props;
   return (
-    <div className={classes.root}>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="title" color="inherit" className={classes.flex}>
-            PharmaDashboard
-          </Typography>
-          <Button color="inherit">Contact Us</Button>
-        </Toolbar>
-      </AppBar>
-    </div>
+    <MuiThemeProvider theme={theme}>
+      <div className={classes.root}>
+        <AppBar position="static" className="navbar-fixed-top" style={{opacity:0.9}}>
+          <Toolbar>
+            <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
+              <MenuIcon />
+            </IconButton>
+            <Typography variant="title" color="inherit" className={classes.flex}>
+              PharmaDashboard
+            </Typography>
+            <Button color="inherit">Contact Us</Button>
+          </Toolbar>
+        </AppBar>
+      </div>
+    </MuiThemeProvider>
   );
 }
 
