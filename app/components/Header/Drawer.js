@@ -12,6 +12,7 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import Header from './Header';
 import { mailFolderListItems, otherMailFolderListItems } from './tileData';
 
 const drawerWidth = 240;
@@ -19,7 +20,7 @@ const drawerWidth = 240;
 const styles = theme => ({
   root: {
     flexGrow: 1,
-    height: 440,
+    height: "-webkit-fill-available",
     zIndex: 1,
     overflow: 'hidden',
     position: 'relative',
@@ -101,6 +102,7 @@ class MiniDrawer extends React.Component {
       <div className={classes.root}>
         <AppBar
           position="absolute"
+          style={{backgroundColor:"#1daee4de", color:"#ededed"}}
           className={classNames(classes.appBar, this.state.open && classes.appBarShift)}
         >
           <Toolbar disableGutters={!this.state.open}>
@@ -113,7 +115,7 @@ class MiniDrawer extends React.Component {
               <MenuIcon />
             </IconButton>
             <Typography variant="title" color="inherit" noWrap>
-              Mini variant drawer
+              PharmaDashboard
             </Typography>
           </Toolbar>
         </AppBar>
@@ -134,9 +136,11 @@ class MiniDrawer extends React.Component {
           <Divider />
           <List>{otherMailFolderListItems}</List>
         </Drawer>
-        <main className={classes.content}>
+        <main style={{background:'#00000014 '}} className={classes.content}>
           <div className={classes.toolbar} />
-          <Typography noWrap>{'You think water moves fast? You should see ice.'}</Typography>
+          <div className="app-wrapper col-md-10">
+            <Header />
+          </div>
         </main>
       </div>
     );
