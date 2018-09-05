@@ -36,7 +36,7 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
         </Helmet>
         <div className="home-page">
           <section className="centered">
-            <h2>Start your next react project in seconds</h2>
+            {/* <h2>Start your next react project in seconds</h2>
             <p>A minimal <i>React-Redux</i> boilerplate with all the best practices</p>
           </section>
           <section>
@@ -54,7 +54,7 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
                 />
               </label>
             </form>
-            <ReposList {...reposListProps} />
+            <ReposList {...reposListProps} /> */}
           </section>
         </div>
       </article>
