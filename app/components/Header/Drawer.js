@@ -13,7 +13,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import Header from './Header';
-import { mailFolderListItems, otherMailFolderListItems } from './tileData';
+import { mailFolderListItems, otherMailFolderListItems } from './TileData';
 
 const drawerWidth = 240;
 
