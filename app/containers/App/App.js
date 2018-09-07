@@ -19,16 +19,16 @@ import Footer from 'components/Footer';
 import './style.scss';
 
 const App = () => (
-  <div className="container">
+  <div>
     <Helmet
-      titleTemplate="%s - PharmaDashboard"
-      defaultTitle="PharmaDashboard"
+      titleTemplate="%s - Gulati Pharma"
+      defaultTitle="Gulati Pharma"
     >
-      <meta name="description" content="A PharmaDashboard application" />
+      <meta name="description" content="A Gulati Pharma application" />
     </Helmet>
-    <div className="row">
-      <Drawer className="col-md-1"/>
-      <div className="app-wrapper col-md-10">
+    <div>
+      <Drawer/>
+      <div className="app-wrapper">
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/features" component={FeaturePage} />

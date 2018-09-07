@@ -41,7 +41,7 @@ function HeaderBar(props) {
               <MenuIcon />
             </IconButton>
             <Typography variant="title" color="inherit" className={classes.flex}>
-              PharmaDashboard
+              Gulati Pharma
             </Typography>
             <Button color="inherit">Contact Us</Button>
           </Toolbar>

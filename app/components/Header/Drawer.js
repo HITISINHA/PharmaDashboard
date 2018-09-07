@@ -16,7 +16,7 @@ import Header from './Header';
 import { mailFolderListItems, otherMailFolderListItems } from './TileData';
 
 const drawerWidth = 240;
-
+const Logo = require('images/favicon.png')
 const styles = theme => ({
   root: {
     flexGrow: 1,
@@ -99,49 +99,58 @@ class MiniDrawer extends React.Component {
     const { classes, theme } = this.props;
 
     return (
-      <div className={classes.root}>
-        <AppBar
-          position="absolute"
-          style={{backgroundColor:"#1daee4de", color:"#ededed"}}
-          className={classNames(classes.appBar, this.state.open && classes.appBarShift)}
-        >
-          <Toolbar disableGutters={!this.state.open}>
-            <IconButton
-              color="inherit"
-              aria-label="Open drawer"
-              onClick={this.handleDrawerOpen}
-              className={classNames(classes.menuButton, this.state.open && classes.hide)}
+      <div>
+        <div className='row'>
+            <AppBar
+              position="absolute"
+              style={{backgroundColor:"#1daee4de", color:"#ededed"}}
+              className={classNames(classes.appBar, classes.appBarShift)}
             >
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="title" color="inherit" noWrap>
-              PharmaDashboard
-            </Typography>
-          </Toolbar>
-        </AppBar>
-        <Drawer
-          variant="permanent"
-          classes={{
-            paper: classNames(classes.drawerPaper, !this.state.open && classes.drawerPaperClose),
-          }}
-          open={this.state.open}
-        >
-          <div className={classes.toolbar}>
-            <IconButton onClick={this.handleDrawerClose}>
-              {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
-            </IconButton>
+              <Toolbar disableGutters={!this.state.open}>
+              <IconButton
+                    color="inherit"
+                    aria-label="Open drawer"
+                    onClick={this.handleDrawerOpen}
+                    className={classNames(classes.menuButton, this.state.open && classes.hide)}
+                >
+                  <MenuIcon />
+                </IconButton>
+                <Typography variant="title" color="inherit" noWrap className="company-title">
+                  <img src={Logo} height='100px' width='200px'/>
+                  <span className="company-title-detail">GULATI PHARMA:</span> Wholesale Chemists
+                </Typography>
+              </Toolbar>
+            </AppBar>
+        </div>
+        <div className='row'>
+            <div className='col-lg-1 col-md-1 col-sm-1 col-xs-1'>
+              <Drawer
+                variant="permanent"
+                classes={{
+                  paper: classNames(classes.drawerPaper, !this.state.open && classes.drawerPaperClose),
+                }}
+                open={this.state.open}
+              >
+                <div className={classes.toolbar}>
+                <IconButton onClick={this.handleDrawerClose}>
+                    {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
+                  </IconButton>
+                </div>
+                <Divider />
+                <List>{mailFolderListItems}</List>
+                <Divider />
+                <List>{otherMailFolderListItems}</List>
+              </Drawer>
+            </div>
+            <div className='col-lg-10 col-md-10 col-sm-10 col-xs-10'>
+              <main style={{background:'#00000014 '}} className={classes.content}>
+                <div className={classes.toolbar} />
+                <div className="app-wrapper ">
+                  <Header />
+                </div>
+              </main>
+            </div>
           </div>
-          <Divider />
-          <List>{mailFolderListItems}</List>
-          <Divider />
-          <List>{otherMailFolderListItems}</List>
-        </Drawer>
-        <main style={{background:'#00000014 '}} className={classes.content}>
-          <div className={classes.toolbar} />
-          <div className="app-wrapper col-md-10">
-            <Header />
-          </div>
-        </main>
       </div>
     );
   }
