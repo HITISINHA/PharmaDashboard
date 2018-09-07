@@ -32,29 +32,26 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
       <article>
         <Helmet>
           <title>Home Page</title>
-          <meta name="description" content="A PharmaDashboard application homepage" />
+          <meta name="description" content="A Gulati Pharma application homepage" />
         </Helmet>
         <div className="home-page">
           <section className="centered">
-            {/* <h2>Start your next react project in seconds</h2>
-            <p>A minimal <i>React-Redux</i> boilerplate with all the best practices</p>
+            <h2>GULATI PHARMA</h2>
+            <p>Leading <i> Wholesale </i> Chemists</p>
           </section>
           <section>
-            <h2>Try me!</h2>
-            <form onSubmit={this.props.onSubmitForm}>
-              <label htmlFor="username">
-              Show Github repositories by
-                <span className="at-prefix">@</span>
-                <input
-                  id="username"
-                  type="text"
-                  placeholder="flexdinesh"
-                  value={this.props.username}
-                  onChange={this.props.onChangeUsername}
-                />
-              </label>
-            </form>
-            <ReposList {...reposListProps} /> */}
+          <blockquote>Medication is manifestation of recuperation</blockquote>
+            <p>
+            Our main focus has been on 
+            Since years, PharmaDashboard has been involved in serving science, 
+            with one of the best customer satisfactions in the area. To assist 
+            your fight against diseases, to ensure no medical issues pull you 
+            back from making the world a  safer, cleaner and safer place to 
+            live, is our prime objective. We help our customers improve their 
+            health, deliver medicines to market and increase laboratory productivity. 
+            We offer an unmatched combination of customer focus, purchasing 
+            convenience and comprehensive services.
+            </p>
           </section>
         </div>
       </article>
