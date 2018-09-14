@@ -77,13 +77,14 @@ class CardHome extends React.Component {
           title="GULATI PHARMA"
           subheader="Leading Wholesale Chemists"
         />
-     <CardMedia
+     {/* <CardMedia
           className={classes.media}
           style={{height:'369px',transform: 'scale(0.65)'}}
           image={LogoImage}
           className={classes.image}
           title="Gulati Pharma"
-        />
+        /> */}
+        <img src={LogoImage} alt="Gulati Pharma" width='280px' style={{margin:'auto', maxWidth: '100%',height:'auto', display:'block'}}/>
         <CardContent>
          <Typography className={classes.title} color="textSecondary">
             Our Company
