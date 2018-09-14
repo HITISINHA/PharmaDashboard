@@ -15,6 +15,8 @@ import FeaturePage from 'containers/FeaturePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import ProductsPage from 'containers/ProductsPage/Loadable';
 import ServicesPage from 'containers/ServicesPage/Loadable';
+import LocateUsPage from 'containers/LocateUsPage/Loadable';
+import ConatactUsPage from 'containers/ContactUsPage/Loadable';
 import Footer from 'components/Footer';
 import './style.scss';
 
@@ -34,6 +36,8 @@ const App = () => (
           <Route path="/features" component={FeaturePage} />
           <Route path="/products" component={ProductsPage} />
           <Route path="/services" component={ServicesPage} />
+          <Route path="/locateus" component={LocateUsPage} />
+          <Route path="/contactus" component={ConatactUsPage} />
           <Route path="" component={NotFoundPage} />
         </Switch>
       </div>
