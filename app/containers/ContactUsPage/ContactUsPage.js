@@ -1,5 +1,5 @@
 /*
- * ServicesPage
+ * ContactUsPage
  *
  * List all the features
  */
@@ -7,7 +7,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import './style.scss';
 
-export default class ServicesPage extends React.Component {
+export default class ContactUsPage extends React.Component {
   // eslint-disable-line react/prefer-stateless-function
 
   // Since state and props are static,
@@ -20,10 +20,10 @@ export default class ServicesPage extends React.Component {
     return (
       <div className="feature-page">
         <Helmet>
-          <title>Services Page</title>
+          <title>Contact Us Page</title>
           <meta
             name="description"
-            content="Services Page of React.js Boilerplate application"
+            content="Contact Us Page of React.js Boilerplate application"
           />
         </Helmet>
         <h1>Features</h1>

@@ -16,7 +16,6 @@ import Header from './Header';
 import { mailFolderListItems, otherMailFolderListItems } from './TileData';
 
 const drawerWidth = 240;
-const Logo = require('images/favicon.png')
 const styles = theme => ({
   root: {
     flexGrow: 1,
@@ -99,11 +98,11 @@ class MiniDrawer extends React.Component {
     const { classes, theme } = this.props;
 
     return (
-      <div>
+      <div className="shift-home">
         <div className='row'>
             <AppBar
               position="absolute"
-              style={{backgroundColor:"#1daee4de", color:"#ededed"}}
+              style={{backgroundColor:"#1daee4de", color:"#ededed", marginLeft: 0, left: 0, width: '100%'}}
               className={classNames(classes.appBar, classes.appBarShift)}
             >
               <Toolbar disableGutters={!this.state.open}>
@@ -116,14 +115,13 @@ class MiniDrawer extends React.Component {
                   <MenuIcon />
                 </IconButton>
                 <Typography variant="title" color="inherit" noWrap className="company-title">
-                  <img src={Logo} height='100px' width='200px'/>
                   <span className="company-title-detail">GULATI PHARMA:</span> Wholesale Chemists
                 </Typography>
               </Toolbar>
             </AppBar>
         </div>
         <div className='row'>
-            <div className='col-lg-1 col-md-1 col-sm-1 col-xs-1'>
+            <div className='col-lg-1 col-md-1 col-sm-1 col-xs-1 shift-sidebar'>
               <Drawer
                 variant="permanent"
                 classes={{
@@ -142,14 +140,14 @@ class MiniDrawer extends React.Component {
                 <List>{otherMailFolderListItems}</List>
               </Drawer>
             </div>
-            <div className='col-lg-10 col-md-10 col-sm-10 col-xs-10'>
+            {/* <div className='col-lg-10 col-md-10 col-sm-10 col-xs-10'>
               <main style={{background:'#00000014 '}} className={classes.content}>
                 <div className={classes.toolbar} />
                 <div className="app-wrapper ">
                   <Header />
                 </div>
               </main>
-            </div>
+            </div> */}
           </div>
       </div>
     );

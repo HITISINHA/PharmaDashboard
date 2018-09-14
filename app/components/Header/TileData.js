@@ -16,19 +16,19 @@ export const mailFolderListItems = (
       <ListItemIcon>
       <Link to="/"><HomeIcon className="drawer-icon" style={{ fontSize: 36, color:"#1daee4" }} /></Link> 
       </ListItemIcon>
-      <ListItemText primary="Home" />
+      <ListItemText style={{fontSize: '15px'}} primary="Home" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
-      <Link to="/"><StoreIcon className="drawer-icon" style={{ fontSize: 36, color:"#1daee4" }} /></Link> 
+      <Link to="/products"><StoreIcon className="drawer-icon" style={{ fontSize: 36, color:"#1daee4" }} /></Link> 
       </ListItemIcon>
-      <ListItemText primary="Products" />
+      <ListItemText style={{fontSize: '15px'}} primary="Products" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
-      <Link to="/"><WorkIcon className="drawer-icon" style={{ fontSize: 36, color:"#1daee4" }} /></Link> 
+      <Link to="/services"><WorkIcon className="drawer-icon" style={{ fontSize: 36, color:"#1daee4" }} /></Link> 
       </ListItemIcon>
-      <ListItemText primary="Services" />
+      <ListItemText style={{fontSize: '15px'}} primary="Services" />
     </ListItem>   
   </div>  
 );
@@ -37,15 +37,15 @@ export const otherMailFolderListItems = (
   <div>
      <ListItem button>
      <ListItemIcon className="drawer-icon">
-     <Link to="/"><PinDropIcon style={{ fontSize: 36, color:"#1daee4" }} /></Link> 
+     <Link to="/locateus"><PinDropIcon style={{ fontSize: 36, color:"#1daee4" }} /></Link> 
      </ListItemIcon>
-     <ListItemText primary="Locate Us" />
+     <ListItemText style={{fontSize: '15px'}} primary="Locate Us" />
    </ListItem>
    <ListItem button>
      <ListItemIcon>
-     <Link to="/"><ContactPhoneIcon className="drawer-icon" style={{ fontSize: 36, color:"#1daee4" }} /></Link> 
+     <Link to="/contactus"><ContactPhoneIcon className="drawer-icon" style={{ fontSize: 36, color:"#1daee4" }} /></Link> 
      </ListItemIcon>
-     <ListItemText primary="Contact Us" />
+     <ListItemText style={{fontSize: '15px'}}  primary="Contact Us" />
    </ListItem>
   </div>
 );

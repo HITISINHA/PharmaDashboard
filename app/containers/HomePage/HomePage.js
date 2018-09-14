@@ -9,6 +9,8 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import ReposList from 'components/ReposList';
 import './style.scss';
+import CardHome from './CardHome';
+import Header from 'components/Header/Header';
 
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   /**
@@ -35,24 +37,9 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
           <meta name="description" content="A Gulati Pharma application homepage" />
         </Helmet>
         <div className="home-page">
-          <section className="centered">
-            <h2>GULATI PHARMA</h2>
-            <p>Leading <i> Wholesale </i> Chemists</p>
-          </section>
-          <section>
-          <blockquote>Medication is manifestation of recuperation</blockquote>
-            <p>
-            Our main focus has been on 
-            Since years, PharmaDashboard has been involved in serving science, 
-            with one of the best customer satisfactions in the area. To assist 
-            your fight against diseases, to ensure no medical issues pull you 
-            back from making the world a  safer, cleaner and safer place to 
-            live, is our prime objective. We help our customers improve their 
-            health, deliver medicines to market and increase laboratory productivity. 
-            We offer an unmatched combination of customer focus, purchasing 
-            convenience and comprehensive services.
-            </p>
-          </section>
+         <Header/>
+         <br/>
+         <CardHome likes={85} />
         </div>
       </article>
     );
