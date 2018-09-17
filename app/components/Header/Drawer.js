@@ -23,7 +23,7 @@ const styles = theme => ({
     zIndex: 1,
     overflow: 'hidden',
     position: 'relative',
-    display: 'flex',
+    display: 'flex'
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
@@ -84,6 +84,7 @@ const styles = theme => ({
 class MiniDrawer extends React.Component {
   state = {
     open: false,
+    mobileView: window && window.innerWidth < 768
   };
 
   handleDrawerOpen = () => {
@@ -96,9 +97,8 @@ class MiniDrawer extends React.Component {
 
   render() {
     const { classes, theme } = this.props;
-
     return (
-      <div className="shift-home">
+      <div className="shift-home" >
         <div className='row'>
             <AppBar
               position="absolute"
@@ -121,16 +121,17 @@ class MiniDrawer extends React.Component {
             </AppBar>
         </div>
         <div className='row'>
-            <div className='col-lg-1 col-md-1 col-sm-1 col-xs-1 shift-sidebar'>
+            <div className='col-lg-1 col-md-1 col-sm-1 col-xs-1 shift-sidebar' >
               <Drawer
-                variant="permanent"
+                variant={this.state.mobileView ? 'temporary' : 'permanent'}
                 classes={{
                   paper: classNames(classes.drawerPaper, !this.state.open && classes.drawerPaperClose),
                 }}
+                style={{height: '665px'}}
                 open={this.state.open}
               >
                 <div className={classes.toolbar}>
-                <IconButton onClick={this.handleDrawerClose}>
+                  <IconButton onClick={this.handleDrawerClose}>
                     {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
                   </IconButton>
                 </div>
