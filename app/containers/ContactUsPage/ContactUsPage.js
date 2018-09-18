@@ -24,7 +24,7 @@ export default class ContactUsPage extends React.Component {
           <title>Contact Us Page</title>
           <meta
             name="description"
-            content="Contact Us Page of React.js Boilerplate application"
+            content="Contact Us Page of Gulati Pharma application"
           />
         </Helmet>
         <CardContactUs/>

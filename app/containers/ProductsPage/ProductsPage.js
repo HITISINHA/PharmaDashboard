@@ -23,7 +23,7 @@ export default class ProductsPage extends React.Component {
           <title>Products Page</title>
           <meta
             name="description"
-            content="Products Page of React.js Boilerplate application"
+            content="Products Page of Gulati Pharma application"
           />
         </Helmet>
         <h1>Features</h1>

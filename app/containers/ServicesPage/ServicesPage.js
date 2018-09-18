@@ -23,7 +23,7 @@ export default class ServicesPage extends React.Component {
           <title>Services Page</title>
           <meta
             name="description"
-            content="Services Page of React.js Boilerplate application"
+            content="Services Page of Gulati Pharma application"
           />
         </Helmet>
         <h1>Features</h1>

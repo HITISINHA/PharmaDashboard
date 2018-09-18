@@ -7,7 +7,7 @@ import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
-import VisitingCard from 'images/visiting_card.jpg'
+import VisitingCard from 'images/visiting_card.jpg';
 
 const styles = theme => ({
   card: {
@@ -26,25 +26,18 @@ const styles = theme => ({
   }
 });
 
-class CardContactUs extends React.Component {
-
+class CardLocateUs extends React.Component {  
   render() {
     const { classes } = this.props;
     return (
       <Card className={classes.card}>
        <CardHeader
-          title="Contact Us"
+          title="Locate Us"
           subheader="Serving You, Curing You!"
-        />
-         <img src={VisitingCard} alt="Gulati Pharma Contact" width='90%' style={{margin:'auto', maxWidth: '100%',height:'auto', display:'block'}}/>
-     {/* <CardMedia
-          className={classes.media}
-          image={VisitingCard}
-          title="Gulati Pharma Contact"
-        /> */}
+        />       
         <CardContent>
          <Typography className={classes.title} color="textSecondary">
-           You may contact us either at our number or the email-address.
+           You may Locate us either at our number or the email-address.
         </Typography>        
         </CardContent>
       </Card>
@@ -52,8 +45,8 @@ class CardContactUs extends React.Component {
   }
 }
 
-CardContactUs.propTypes = {
+CardLocateUs.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(CardContactUs);
+export default withStyles(styles)(CardLocateUs);
