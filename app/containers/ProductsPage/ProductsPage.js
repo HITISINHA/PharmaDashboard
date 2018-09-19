@@ -37,7 +37,7 @@ const companyList =[
 ['Seagull Pharma', Seagull],
 ['Comed', Comed],
 ['BioSearch', BioSearch]
-]
+];
 
 export default class ProductsPage extends React.Component {
   // eslint-disable-line react/prefer-stateless-function
