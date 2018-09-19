@@ -5,7 +5,39 @@
  */
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import PaperProduct from './PaperProduct';
+import Solares from 'images/logos/solares.png';
+import SunPharma from 'images/logos/sun_solares.png';
+import AstraZeneca from 'images/logos/astra_zeneca.png';
+import ZydusAlidacCadila from 'images/logos/zydus_adilac_cadila.png';
+import Spectra from 'images/logos/spectra.png';
+import NuserchOrganics from 'images/logos/nuserch_organics.png';
+import Medispan from 'images/logos/medispan.png';
+import Leeford from 'images/logos/leeford.png';
+import Msd from 'images/logos/msd.png';
+import WallacePharma from 'images/logos/wallace.png';
+import Seagull from 'images/logos/seagull.png';
+import Biosearch from 'images/logos/biosearch.png';
+import Comed from 'images/logos/comed.png';
+
 import './style.scss';
+
+const companyList =[
+['Sun Solares', Solares], //to be changed later
+['Astra Zeneca', AstraZeneca],
+['Zydus Alidac-Cadila',ZydusAlidacCadila],
+['Spectra', Spectra],
+['Nuserch Organics', NuserchOrganics],
+['Sun Pharma', SunPharma],
+['Ozone', Ozone],
+['Medispan', Medispan],
+['Leeford', Leeford],
+['MSD', Msd],
+['Wallace Pharma', WallacePharma],
+['Seagull Pharma', Seagull],
+['Comed', Comed],
+['BioSearch', BioSearch]
+];
 
 export default class ProductsPage extends React.Component {
   // eslint-disable-line react/prefer-stateless-function
@@ -26,41 +58,7 @@ export default class ProductsPage extends React.Component {
             content="Products Page of Gulati Pharma application"
           />
         </Helmet>
-        <h1>Features</h1>
-        <ul>
-          <li>
-            <p className="title">Next generation JavaScript</p>
-            <p>
-              Use template strings, object destructuring, arrow functions, JSX
-              syntax and more, today.
-            </p>
-          </li>
-          <li>
-            <p className="title">Instant feedback</p>
-            <p>
-              Enjoy the best DX and code your app at the speed of thought! Your
-              saved changes to the CSS and JS are reflected instantaneously
-              without refreshing the page. Preserve application state even when
-              you update something in the underlying code!
-            </p>
-          </li>
-          <li>
-            <p className="title">Industry-standard routing</p>
-            <p>
-              {
-                "Write composable CSS that's co-located with your components for complete modularity. Unique generated class names keep the specificity low while eliminating style clashes. Ship only the styles that are on the page for the best performance."
-              }
-            </p>
-          </li>
-          <li>
-            <p className="title">The Best Test Setup</p>
-            <p>
-              Automatically guarantee code quality and non-breaking changes.
-              (Seen a react app with 99% test coverage before?)
-            </p>
-          </li>
-        </ul>
-        <i>and much more...</i>
+        <PaperProduct companyProducts={companyList}/>
       </div>
     );
   }
