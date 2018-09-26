@@ -59,6 +59,7 @@ export default class ProductsPage extends React.Component {
             content="Products Page of Gulati Pharma application"
           />
         </Helmet>
+        <h1 className="heading-page">Our Product Range...</h1>
         <PaperProduct companyProducts={companyList}/>
       </div>
     );

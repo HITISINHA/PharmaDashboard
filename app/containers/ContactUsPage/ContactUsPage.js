@@ -27,6 +27,7 @@ export default class ContactUsPage extends React.Component {
             content="Contact Us Page of Gulati Pharma application"
           />
         </Helmet>
+        <h1 className="heading-page">We are just one call away!</h1>
         <CardContactUs/>
       </div>
     );
