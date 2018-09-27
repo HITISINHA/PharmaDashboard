@@ -13,6 +13,7 @@ import ZydusAlidacCadila from 'images/logos/zydus_adilac_cadila.png';
 import Spectra from 'images/logos/spectra.png';
 import NuserchOrganics from 'images/logos/nuserch_organics.png';
 import Medispan from 'images/logos/medispan.png';
+import Ozone from 'images/logos/ozone.png';
 import Leeford from 'images/logos/leeford.png';
 import Msd from 'images/logos/msd.png';
 import WallacePharma from 'images/logos/wallace.png';
@@ -36,7 +37,7 @@ const companyList =[
 ['Wallace Pharma', WallacePharma],
 ['Seagull Pharma', Seagull],
 ['Comed', Comed],
-['BioSearch', BioSearch]
+['BioSearch', Biosearch]
 ];
 
 export default class ProductsPage extends React.Component {
@@ -58,6 +59,7 @@ export default class ProductsPage extends React.Component {
             content="Products Page of Gulati Pharma application"
           />
         </Helmet>
+        <h1 className="heading-page">Our Product Range...</h1>
         <PaperProduct companyProducts={companyList}/>
       </div>
     );

@@ -39,6 +39,7 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
         <div className="feature-page">
          <Header/>
          <br/>
+         <h1 className="heading-page">Who we are? What do we do?</h1>
          <CardHome likes={85} />
         </div>
       </article>

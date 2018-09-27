@@ -27,6 +27,7 @@ export default class LocateUsPage extends React.Component {
             content="Locate Us Page of Gulati Pharma application"
           />
         </Helmet>
+        <h1 className="heading-page">We are there for you!</h1>
         <CardLocateUs/>
       </div>
     );

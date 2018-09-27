@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
+import Divider from '@material-ui/core/Divider';
+
 const styles = theme => ({
   root: {
     ...theme.mixins.gutters(),
@@ -28,13 +30,20 @@ class PaperSheet extends React.Component {
       return (        
         <div className="row">        
           {this.props.companyProducts.map((object, i) => 
-          <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+          <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <Paper className={classes.root} style={{margin:'15px', paddingBottom: '20px',
-    paddingTop: '20px',  height: '200px', width: '200px', textAlign: 'center'}} elevation={1} key={i}>
-            <img src={object[1]} alt={object[0]} height= '75px' width= '150px'style={{marginBottom:'20px'}}/>
-            <Typography variant="display1" component="h3">
-             {object[0]}
-            </Typography>
+    paddingTop: '20px', height: '100px', width: '600px', textAlign: 'center'}} elevation={1} >
+            <div className="service-card-content"> 
+            <img src={object[1]} alt={object[0]} height= '100px' width= '100px'style={{marginBottom:'20px', marginTop: '-20px',marginLeft: '-20px'}}/>
+            <Typography style={{textAlign:'left'}} variant="display1" component="h3">
+             {object[0]}         
+             <Divider/>
+            <Typography style={{display: 'block', marginTop:'10px'}} variant="headline" component="h3">
+             {object[2]}             
+            </Typography>    
+            </Typography>            
+            </div>
+            
           </Paper>
           </div>
           )}
