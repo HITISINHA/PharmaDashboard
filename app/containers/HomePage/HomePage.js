@@ -10,6 +10,7 @@ import { Helmet } from 'react-helmet';
 import ReposList from 'components/ReposList';
 import './style.scss';
 import CardHome from './CardHome';
+import CardUs from './CardUs';
 import Header from 'components/Header/Header';
 
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
@@ -39,8 +40,10 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
         <div className="feature-page">
          <Header/>
          <br/>
-         <h1 className="heading-page">Who we are? What do we do?</h1>
+         <h1 className="heading-page">What do we do?</h1>
          <CardHome likes={85} />
+         <h1 className="heading-page">Who we are? </h1>
+         <CardUs likes={85} />
         </div>
       </article>
     );
