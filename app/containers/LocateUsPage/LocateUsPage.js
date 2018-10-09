@@ -6,6 +6,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import CardLocateUs from './CardLocateUs';
+import { BUSINESSCONFIG } from '../../constants/BusinessConfig';
 import './style.scss';
 
 export default class LocateUsPage extends React.Component {
@@ -18,17 +19,18 @@ export default class LocateUsPage extends React.Component {
   }
 
   render() {
+    const companyName = BUSINESSCONFIG.COMPANY;
     return (
       <div className="feature-page">
         <Helmet>
-          <title>Locate Us Page</title>
+          <title>{companyName.LOCATEMESSAGE}</title>
           <meta
             name="description"
-            content="Locate Us Page of Gulati Pharma application"
+            content={companyName.LOCATEPAGEHEADER}
           />
         </Helmet>
-        <h1 className="heading-page">We are there for you!</h1>
-        <CardLocateUs/>
+        <h1 className="heading-page">{companyName.LOCATEQUOTE}</h1>
+        <CardLocateUs />
       </div>
     );
   }

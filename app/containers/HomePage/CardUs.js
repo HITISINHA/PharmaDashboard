@@ -17,6 +17,7 @@ import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import ProfilePicture from 'images/profile.png';
+import { BUSINESSCONFIG } from '../../constants/BusinessConfig';
 
 const styles = theme => ({
   card: {
@@ -70,20 +71,21 @@ class CardHome extends React.Component {
   };
 
   render() {
+    const companyName = BUSINESSCONFIG.COMPANY;
     const { classes } = this.props;
     return (
       <Card className={classes.card}>
-       <CardHeader
-          title="GULATI PHARMA"
-          subheader="Leading Wholesale Chemists"
+        <CardHeader
+          title={companyName.UPPERCASENAME}
+          subheader={companyName.DESCRIPTION}
         />
-        <img src={ProfilePicture} alt="Gulati Pharma" width='180px' height='180px' style={{margin:'auto', maxWidth: '100%',height:'auto', display:'block'}}/>
+        <img src={ProfilePicture} alt={companyName.CAMELCASENAME} width='180px' height='180px' style={{margin:'auto', maxWidth: '100%',height:'auto', display:'block'}}/>
         <CardContent>
          <Typography className={classes.title} color="textSecondary">
-            Our Major Stake Holders
+            {companyName.COMPANYHEADER}
         </Typography>
         <Typography variant="headline" component="h2">
-        <b>Let's not be keen to maintain our standards. Lets improvise them.</b>
+        <b>{companyName.COMPANYQUOTED}</b>
         </Typography>        
         </CardContent>
         <CardActions className={classes.actions} disableActionSpacing>
@@ -112,7 +114,7 @@ class CardHome extends React.Component {
               <li>
                 <b>Our Owners and Managers</b>
                 <ol>
-                  <li></li>
+                  <li>Still Hard coded </li>
                   <li>b</li>
                   <li>c</li>
                 </ol>
