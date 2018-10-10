@@ -6,39 +6,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import PaperProduct from './PaperProduct';
-import Solares from 'images/logos/solares.png';
-import SunPharma from 'images/logos/sun_solares.png';
-import AstraZeneca from 'images/logos/astra_zeneca.png';
-import ZydusAlidacCadila from 'images/logos/zydus_adilac_cadila.png';
-import Spectra from 'images/logos/spectra.png';
-import NuserchOrganics from 'images/logos/nuserch_organics.png';
-import Medispan from 'images/logos/medispan.png';
-import Ozone from 'images/logos/ozone.png';
-import Leeford from 'images/logos/leeford.png';
-import Msd from 'images/logos/msd.png';
-import WallacePharma from 'images/logos/wallace.png';
-import Seagull from 'images/logos/seagull.png';
-import Biosearch from 'images/logos/biosearch.png';
-import Comed from 'images/logos/comed.png';
-
+import { BUSINESSCONFIG } from '../../constants/BusinessConfig';
 import './style.scss';
-
-const companyList =[
-['Sun Solares', Solares], //to be changed later
-['Astra Zeneca', AstraZeneca],
-['Zydus Alidac-Cadila',ZydusAlidacCadila],
-['Spectra', Spectra],
-['Nuserch Organics', NuserchOrganics],
-['Sun Pharma', SunPharma],
-['Ozone', Ozone],
-['Medispan', Medispan],
-['Leeford', Leeford],
-['MSD', Msd],
-['Wallace Pharma', WallacePharma],
-['Seagull Pharma', Seagull],
-['Comed', Comed],
-['BioSearch', Biosearch]
-];
 
 export default class ProductsPage extends React.Component {
   // eslint-disable-line react/prefer-stateless-function
@@ -50,17 +19,18 @@ export default class ProductsPage extends React.Component {
   }
 
   render() {
+    const companyName = BUSINESSCONFIG.COMPANY;
     return (
       <div className="feature-page">
         <Helmet>
-          <title>Products Page</title>
+          <title>{companyName.PRODUCTSMESSAGE}</title>
           <meta
             name="description"
-            content="Products Page of Gulati Pharma application"
+            content={companyName.PRODUCTSPAGEHEADER}
           />
         </Helmet>
-        <h1 className="heading-page">Our Product Range...</h1>
-        <PaperProduct companyProducts={companyList}/>
+        <h1 className="heading-page">{companyName.PRODUCTSQUOTE}</h1>
+        <PaperProduct companyProducts={companyName.PRODUCTS} />
       </div>
     );
   }

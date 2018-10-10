@@ -10,7 +10,9 @@ import { Helmet } from 'react-helmet';
 import ReposList from 'components/ReposList';
 import './style.scss';
 import CardHome from './CardHome';
+import CardUs from './CardUs';
 import Header from 'components/Header/Header';
+import { BUSINESSCONFIG } from '../../constants/BusinessConfig';
 
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   /**
@@ -29,18 +31,20 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
       error,
       repos,
     };
-
-    return (  
+    const companyName = BUSINESSCONFIG.COMPANY;
+    return (
       <article>
         <Helmet>
-          <title>Home Page</title>
-          <meta name="description" content="A Gulati Pharma application homepage" />
+          <title>{companyName.HOMEPAGETITLE}</title>
+          <meta name="description" content={companyName.HOMEPAGEHEADER} />
         </Helmet>
         <div className="feature-page">
-         <Header/>
-         <br/>
-         <h1 className="heading-page">Who we are? What do we do?</h1>
-         <CardHome likes={85} />
+          <Header />
+          <br />
+          <h1 className="heading-page">{companyName.HOMEFIRSTCARDTITLE}</h1>
+          <CardHome likes={85} />
+          <h1 className="heading-page">{companyName.HOMESECONDCARDTITLE} </h1>
+          <CardUs likes={85} />
         </div>
       </article>
     );

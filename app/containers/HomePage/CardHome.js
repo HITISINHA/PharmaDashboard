@@ -17,6 +17,7 @@ import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import LogoImage from 'images/favicon.png';
+import { BUSINESSCONFIG } from '../../constants/BusinessConfig';
 
 const styles = theme => ({
   card: {
@@ -70,20 +71,21 @@ class CardHome extends React.Component {
   };
 
   render() {
+    const companyName = BUSINESSCONFIG.COMPANY;
     const { classes } = this.props;
     return (
       <Card className={classes.card}>
        <CardHeader
-          title="GULATI PHARMA"
-          subheader="Leading Wholesale Chemists"
+          title={companyName.UPPERCASENAME}
+          subheader={companyName.DESCRIPTION}
         />
-        <img src={LogoImage} alt="Gulati Pharma" width='280px' style={{margin:'auto', maxWidth: '100%',height:'auto', display:'block'}}/>
+        <img src={LogoImage} alt={companyName.CAMELCASENAME} width='280px' style={{margin:'auto', maxWidth: '100%',height:'auto', display:'block'}}/>
         <CardContent>
          <Typography className={classes.title} color="textSecondary">
-            Our Company
+         {companyName.HOMEHEADER}
         </Typography>
         <Typography variant="headline" component="h2">
-        <b>Medication is manifestation of recuperation</b>
+        <b>{companyName.COMPANYQUOTE}</b>
         </Typography>        
         </CardContent>
         <CardActions className={classes.actions} disableActionSpacing>
@@ -108,15 +110,7 @@ class CardHome extends React.Component {
         <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
           <CardContent>
             <Typography paragraph variant="body1" className={classes.body}>
-            Our main focus has been on 
-            Since years, PharmaDashboard has been involved in serving science, 
-            with one of the best customer satisfactions in the area. To assist 
-            your fight against diseases, to ensure no medical issues pull you 
-            back from making the world a  safer, cleaner and safer place to 
-            live, is our prime objective. We help our customers improve their 
-            health, deliver medicines to market and increase laboratory productivity. 
-            We offer an unmatched combination of customer focus, purchasing 
-            convenience and comprehensive services.
+            {companyName.COMPANYDETAILS}
             </Typography>
           </CardContent>
         </Collapse>

@@ -14,6 +14,7 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import Header from './Header';
 import { mailFolderListItems, otherMailFolderListItems } from './TileData';
+import  {BUSINESSCONFIG} from '../../constants/BusinessConfig.jsx';
 
 const drawerWidth = 240;
 const styles = theme => ({
@@ -97,6 +98,7 @@ class MiniDrawer extends React.Component {
 
   render() {
     const { classes, theme } = this.props;
+    const companyName = BUSINESSCONFIG.COMPANY;
     return (
       <div className="shift-home" >
         <div className='row'>
@@ -115,7 +117,8 @@ class MiniDrawer extends React.Component {
                   <MenuIcon />
                 </IconButton>
                 <Typography variant="title" color="inherit" noWrap className="company-title">
-                  <span className="company-title-detail">GULATI PHARMA:</span> Wholesale Chemists
+                  <span className="company-title-detail">{companyName.UPPERCASENAME}:</span>
+                   &nbsp;{companyName.DESCRIPTION}
                 </Typography>
               </Toolbar>
             </AppBar>

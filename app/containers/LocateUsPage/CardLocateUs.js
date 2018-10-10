@@ -11,6 +11,7 @@ import Typography from '@material-ui/core/Typography';
 import MapCard from 'images/map.jpg';
 import Directions from '@material-ui/icons/Directions';
 import Tooltip from '@material-ui/core/Tooltip';
+import { BUSINESSCONFIG } from '../../constants/BusinessConfig';
 
 const styles = theme => ({
   card: {
@@ -31,16 +32,17 @@ const styles = theme => ({
 
 class CardLocateUs extends React.Component {  
   render() {
+    const companyName = BUSINESSCONFIG.COMPANY;
     const { classes } = this.props;
     return (
       <Card className={classes.card}>
        <CardHeader
-          title="Locate Us"
-          subheader="Serving You, Curing You!"
+          title={companyName.LOCATEMESSAGE}
+          subheader={companyName.CONTACTTAG}
         />       
         <CardContent>
-        <a href="https://www.google.de/maps/place/Gulati+Pharma/@25.1888526,75.8348495,15z/data=!4m5!3m4!1s0x0:0x75bd7b80836f2d9c!8m2!3d25.1888138!4d75.8419305">
-        <img src={MapCard} alt="Gulati Pharma Location" width='90%'         
+        <a href={companyName.LOCATIONLINK}>
+        <img src={MapCard} alt={companyName.LOCATETEXT} width='90%'         
         style={{margin:'auto', maxWidth: '100%',height:'auto', display:'block'}}/>
         </a>
          <Typography color="textSecondary">
@@ -48,8 +50,8 @@ class CardLocateUs extends React.Component {
         </Typography>        
         </CardContent>
         <CardActions>
-        <Tooltip title="Locate Us">
-          <a href="https://www.google.de/maps/dir//gulati+pharma,1,+Porwal+Medical+Market,+Ladpura,+Kota,+Rajasthan+-+324001/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x396f9b18019b44f3:0x75bd7b80836f2d9c?sa=X&ved=2ahUKEwjnyL3HrcTdAhXE2ywKHRw_CJQQ9RcwC3oECAoQDg">
+        <Tooltip title={companyName.LOCATEMESSAGE} >
+          <a href={companyName.DIRECTIONLINK}>
             <Directions style={{ fontSize: 36, color:"#1daee4" }} />
           </a>
         </Tooltip>

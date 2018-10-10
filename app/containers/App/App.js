@@ -9,7 +9,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Switch, Route } from 'react-router-dom';
-import Drawer from '../../components/Header/Drawer';
 import HomePage from 'containers/HomePage/Loadable';
 import FeaturePage from 'containers/FeaturePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
@@ -18,15 +17,18 @@ import ServicesPage from 'containers/ServicesPage/Loadable';
 import LocateUsPage from 'containers/LocateUsPage/Loadable';
 import ConatactUsPage from 'containers/ContactUsPage/Loadable';
 import Footer from 'components/Footer';
+import Drawer from '../../components/Header/Drawer';
+import { BUSINESSCONFIG } from '../../constants/BusinessConfig';
 import './style.scss';
 
+const companyName = BUSINESSCONFIG.COMPANY;
 const App = () => (
   <div>
     <Helmet
-      titleTemplate="%s - Gulati Pharma"
-      defaultTitle="Gulati Pharma"
+      titleTemplate={'%s'.concat(' - ', companyName.CAMELCASENAME)}
+      defaultTitle={companyName.CAMELCASENAME}
     >
-      <meta name="description" content="A Gulati Pharma application" />
+      <meta name="description" content={companyName.HELMETMESSAGE} />
     </Helmet>
     <div>
       <Drawer/>

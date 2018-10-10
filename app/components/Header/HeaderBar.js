@@ -8,6 +8,7 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import  {BUSINESSCONFIG} from '../../constants/BusinessConfig.jsx';
 
 const styles = {
   root: {
@@ -32,6 +33,7 @@ const theme = createMuiTheme({
 
 function HeaderBar(props) {
   const { classes } = props;
+  const companyName = BUSINESSCONFIG.COMPANY;
   return (
     <MuiThemeProvider theme={theme}>
       <div className={classes.root}>
@@ -41,9 +43,9 @@ function HeaderBar(props) {
               <MenuIcon />
             </IconButton>
             <Typography variant="title" color="inherit" className={classes.flex}>
-              Gulati Pharma
+            {companyName.CAMELCASENAME}
             </Typography>
-            <Button color="inherit">Contact Us</Button>
+            <Button color="inherit">{companyName.CONTACTMESSAGE}</Button>
           </Toolbar>
         </AppBar>
       </div>
